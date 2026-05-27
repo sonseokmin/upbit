@@ -18,9 +18,10 @@ class UpbitAutoTrader:
 
         # 알림 설정 객체 생성
         self.alert_manager = AlertManager()
-        self.alert_manager.send_discord(
+        result = self.alert_manager.send_discord(
             "🔔 Upbit 변동성 돌파 자동매매 시스템이 시작되었습니다."
         )
+        print(result)
 
         # 프로그램 제어 변수
         self.hold = False
